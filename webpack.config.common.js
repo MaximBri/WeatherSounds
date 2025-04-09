@@ -1,9 +1,9 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const outDir = 'dist'
+const outDir = 'dist';
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -18,18 +18,24 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './public/index.html'),
+      template: path.resolve(
+        __dirname,
+        './public/index.html',
+      ),
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, './public/favicon.ico'),
+          from: path.resolve(
+            __dirname,
+            './public/favicon.ico',
+          ),
           to: path.resolve(__dirname, outDir),
         },
         {
-          from: 'public/assets', 
-          to: 'assets', 
-          noErrorOnMissing: true
+          from: path.resolve(__dirname, 'public/assets'),
+          to: 'assets',
+          noErrorOnMissing: true,
         },
       ],
     }),
@@ -67,4 +73,4 @@ module.exports = {
       },
     ],
   },
-}
+};
