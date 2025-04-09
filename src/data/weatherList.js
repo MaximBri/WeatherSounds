@@ -17,6 +17,6 @@ const weatherList = [
     iconPath: 'cloud-snow.svg',
     audioPath: 'winter.mp3',
   },
-]
+];
 
-export default weatherList
+export default weatherList;
