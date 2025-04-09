@@ -1,0 +1,47 @@
+body {
+  backdrop-filter: blur(6px);
+  width: 100dvw;
+  height: 100dvh;
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  > h1 {
+    padding: 20px 0 40px;
+    font-size: 80px;
+    color: rgb(253, 152, 0);
+  }
+}
+
+.list-item {
+  position: relative;
+  > input {
+    position: absolute;
+    bottom: -15%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+
+.sounds-list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  & button {
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    background-position: 0% 50%;
+    background-size: cover;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    & img {
+      width: 30%;
+      height: 30%;
+    }
+  }
+}
